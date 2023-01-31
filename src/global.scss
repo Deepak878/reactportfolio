@@ -1,2 +1,18 @@
+$mainColor: #15023a;
+$width: 768px;
+$tablet-minwidth: 769px;
+$tablet-maxwidth: 1309px;
 
-$mainColor: #15023a
+
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-minwidth}) and (max-width: #{$tablet-maxwidth}) {
+        @content
+    }
+}
